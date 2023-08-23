@@ -9,5 +9,9 @@ def write(table):
     table.to_csv('output_file_name.csv', index=False)
 
 
+def convert(filename):
+    write(read(filename))
+
+
 if __name__ == "__main__":
-    write(read('first_project.xlsx'))
+    convert('first_project.xlsx')
