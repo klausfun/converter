@@ -14,4 +14,11 @@ def convert(filename: str) -> None:
 
 
 if __name__ == "__main__":
-    convert('first_project.xlsx')
+    filename = input()
+    if not filename:
+        filename = 'first_project.xlsx'
+
+    try:
+        convert(filename)
+    except Exception as e:
+        print(e)
