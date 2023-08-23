@@ -1,15 +1,15 @@
 import pandas as pd
 
 
-def read(filename):
+def read(filename: str) -> pd.DataFrame:
     return pd.read_excel(filename, engine='openpyxl')
 
 
-def write(table):
+def write(table: pd.DataFrame) -> None:
     table.to_csv('output_file_name.csv', index=False)
 
 
-def convert(filename):
+def convert(filename: str) -> None:
     write(read(filename))
 
 
