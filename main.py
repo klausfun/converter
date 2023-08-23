@@ -6,6 +6,7 @@ def read(filename: str) -> pd.DataFrame:
 
 
 def write(table: pd.DataFrame) -> None:
+    print(table)
     table.to_csv('output_file_name.csv', index=False)
 
 
