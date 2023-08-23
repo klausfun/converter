@@ -6,6 +6,7 @@ def read(filename):
 
 
 def write(table):
+    print(table)
     table.to_csv('output_file_name.csv', index=False)
 
 
