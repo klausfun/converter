@@ -1,8 +1,8 @@
 import pandas as pd
 
 
-def read():
-    return pd.read_excel(io='first_project.xlsx', engine='openpyxl')
+def read(filename):
+    return pd.read_excel(filename, engine='openpyxl')
 
 
 def write(table):
@@ -10,4 +10,4 @@ def write(table):
 
 
 if __name__ == "__main__":
-    write(read())
+    write(read('first_project.xlsx'))
